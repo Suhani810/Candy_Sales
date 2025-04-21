@@ -13,8 +13,10 @@ This project explores and analyzes a dataset of candy sales using Python for dat
 
 ## 🔧 Technologies Used
 
-- **Python** (Pandas, NumPy)
+- **Python** 
 - **Data Visualization**: Matplotlib, Seaborn
+- **Numpy**: For Numerical Values
+- **Pandas**: For Data Handling
 
 ---
 
