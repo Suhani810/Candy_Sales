@@ -22,7 +22,7 @@ This project explores and analyzes a dataset of candy sales using Python for dat
 
 ## ✅ Project Objectives
 
-### 🧹 Objective 0: Data Preprocessing & Cleaning
+### 🧹 Objective 0: Data Preprocessing and Cleaning
 
 - Convert date columns (`Order Date`, `Ship Date`) to datetime objects.
 - Handle missing values:
