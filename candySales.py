@@ -25,21 +25,6 @@ sales_data.drop_duplicates(inplace=True)
 print(sales_data.info())
 print(sales_data.head())
 
-# ================================ Exploratory Data Analysis (EDA) ================================
-
-# 1. Summary Statistics
-print("Summary stats-")
-print(sales_data.describe())
-
-# 2. Correlation & Covariance
-print("Correlation Matrix")
-print(sales_data[["Sales", "Units", "Gross Profit", "Cost"]].corr())
-
-print("Covariance Matrix")
-print(sales_data[["Sales", "Units", "Gross Profit", "Cost"]].cov())
-
-
-
 # ================================ Objective 2: Orders & State Performance ==========================
 
 # Load dataset
