@@ -38,20 +38,7 @@ print(sales_data[["Sales", "Units", "Gross Profit", "Cost"]].corr())
 print("Covariance Matrix")
 print(sales_data[["Sales", "Units", "Gross Profit", "Cost"]].cov())
 
-# ================================ Objective 1: Revenue Stats ======================================
 
-# Load dataset
-sales_data = pd.read_csv("Candy_Sales.csv")
-sales = np.array(sales_data["Sales"])
-
-# Calculate total, average revenue and std deviation
-total_revenue = np.sum(sales)
-average_revenue = np.mean(sales)
-std_dev_sales = np.std(sales)
-
-print("Total Revenue:", total_revenue)
-print("Average Revenue per Order:", average_revenue)
-print("Standard Deviation of Sales:", std_dev_sales)
 
 # ================================ Objective 2: Orders & State Performance ==========================
 
