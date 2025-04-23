@@ -191,3 +191,39 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
+
+# ================================ Objective 6: Seasonal Sales Trends ==============================
+
+# 1. Line Plot: Monthly Candy Sales Trend
+sales_data['Order Date'] = pd.to_datetime(sales_data['Order Date'])
+sales_data['YearMonth'] = sales_data['Order Date'].dt.to_period('M')
+monthly_sales = sales_data.groupby('YearMonth')['Sales'].sum().reset_index()
+monthly_sales['YearMonth'] = monthly_sales['YearMonth'].astype(str)
+
+plt.figure(figsize=(12, 6))
+plt.plot(monthly_sales['YearMonth'], monthly_sales['Sales'], marker='o', linestyle='-', color='green')
+plt.title('Monthly Candy Sales Trend')
+plt.xlabel('Month')
+plt.ylabel('Total Sales ($)')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# 2. Seasonal Area Chart
+sales_data['Order Date'] = pd.to_datetime(sales_data['Order Date'])
+sales_data['Month'] = sales_data['Order Date'].dt.to_period('M').astype(str)
+monthly_sales = sales_data.groupby('Month')['Sales'].sum().reset_index()
+
+plt.figure(figsize=(12, 6))
+plt.fill_between(monthly_sales['Month'], monthly_sales['Sales'], color='yellow', alpha=0.6)
+plt.plot(monthly_sales['Month'], monthly_sales['Sales'], color='red', marker='o')
+plt.xticks(rotation=45)
+plt.title('Seasonal Candy Sales Trends')
+plt.xlabel('Month')
+plt.ylabel('Total Sales ($)')
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.tight_layout()
+plt.show()
+
+
