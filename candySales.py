@@ -39,21 +39,6 @@ print("Covariance Matrix")
 print(sales_data[["Sales", "Units", "Gross Profit", "Cost"]].cov())
 
 
-
-# ================================ Objective 2: Orders & State Performance ==========================
-
-# Load dataset
-sales_data = pd.read_csv("Candy_Sales.csv")
-
-# Total orders, units, and top state
-total_orders = sales_data.shape[0]
-total_units = sales_data["Units"].sum()
-state_highest_sale = sales_data.groupby("State/Province")["Sales"].sum().idxmax()
-
-print("Total number of Orders:", total_orders)
-print("Total Units sold:", total_units)
-print("State with the highest Sales:", state_highest_sale)
-
 # ================================ Objective 3: Sales & Profit Visuals ==============================
 
 # 1. Sales Trends Over Time
